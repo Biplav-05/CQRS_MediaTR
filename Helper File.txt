@@ -1,0 +1,32 @@
+create a solution file =>  dotnet new sln -n Result_Publisher
+create a class Library file => dotnet new classlib -o Application,Domain and infrastructure
+
+create a web api (presentation layer) => dotnet new webapi -o Result_Publisher_API
+
+
+Add all project reference to soultion file => dotnet sln Result_Publisher.sln
+ add (ls -r **/*.csproj)
+
+Install two package in application and infrastructre layer
+
+1 -> NuGet\Install-Package Microsoft.Extensions.DependencyInjection -Version 7.0.0 
+link (https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/)
+
+2 -> NuGet\Install-Package Microsoft.Extensions.Configuration -Version 7.0.0
+link (https://www.nuget.org/packages/Microsoft.Extensions.Configuration/)
+
+Create a class called RegisterServices in infrastructure layer. and also create the RegisteService Classs in the application layer and add it to the program.cs
+
+Install the two packages Entity framwrork core and Entity framwork Npgsql in infrastructure layer
+
+Install the mediator in Api and Application layer 
+link (NuGet\Install-Package MediatR -Version 12.1.1)
+
+
+Install Automapper to Application layer
+link => NuGet\Install-Package AutoMapper.Extensions.Microsoft.DependencyInjection -Version 12.0.1
+
+
+IPipelineBehaviour
+ install the package FluentValidation.Dependency injection in application layer
+link => NuGet\Install-Package FluentValidation.DependencyInjectionExtensions -Version 11.7.1
